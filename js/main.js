@@ -160,22 +160,16 @@ $$('.video-icon').forEach((item) => {
     }
 });
 
-window.onload = (event) =>{    
-    // const tempURL = "https://Victoryle2.unimmo.net/"
+const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(window.location.href)
+let refNameThisShit = nameThisShit[1]
+// console.log(refNameThisShit)
 
-    // console.log(document.URL)
-    // const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(tempURL)
-    const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(window.location.href)
-    let refNameThisShit = nameThisShit[1]
-    // console.log(refNameThisShit)
+if(refNameThisShit==="kiemtien"){
+    refNameThisShit="seven"
+}else{
+    refNameThisShit = /([^\/]+)2/.exec(refNameThisShit)[1]
+}
 
-    if(refNameThisShit==="kiemtien"){
-        refNameThisShit="seven"
-    }else{
-        refNameThisShit = /([^\/]+)2/.exec(refNameThisShit)[1]
-    }
-
-    $$('.ref-link').forEach((item) => {
-        item.href = `https://lottpower.org/signup/${refNameThisShit}`
-    });
-};
+$$('.ref-link').forEach((item) => {
+    item.href = `https://lottpower.org/signup/${refNameThisShit}`
+});
