@@ -161,11 +161,11 @@ $$('.video-icon').forEach((item) => {
 });
 
 window.onload = (event) =>{    
-    const tempURL = "https://Victoryle2.unimmo.net/"
+    // const tempURL = "https://Victoryle2.unimmo.net/"
 
     // console.log(document.URL)
-    const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(tempURL)
-    // const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(window.location.href)
+    // const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(tempURL)
+    const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(window.location.href)
     let refNameThisShit = nameThisShit[1]
     // console.log(refNameThisShit)
 
